@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane maxHeight="50.0" prefHeight="50.0">
+         <children>
+            <TextField fx:id="searchTextfield" layoutY="15.0" prefHeight="25.0" prefWidth="284.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="15.0" />
+            <Button fx:id="searchButton" layoutX="288.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchAction" text="Search" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <Label text="Label">
+         <VBox.margin>
+            <Insets bottom="1.0" left="20.0" right="1.0" top="1.0" />
+         </VBox.margin>
+      </Label>
+      <AnchorPane prefHeight="192.0" prefWidth="373.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tableAddressBook" prefHeight="192.0" prefWidth="316.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="columnName" prefWidth="118.0" text="Name" />
+                <TableColumn fx:id="columnNumber" prefWidth="197.0" text="Number" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane maxHeight="50.0" prefHeight="50.0">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#showDialog" text="   Add   " />
+            <Button fx:id="changeButton" layoutX="128.0" mnemonicParsing="false" onAction="#changeAction" text="Change" />
+            <Button fx:id="deleteButton" layoutX="267.0" mnemonicParsing="false" onAction="#deleteAction" text="Delete" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <HBox prefHeight="0.0" prefWidth="408.0">
+         <children>
+            <Label fx:id="numberOfContacts" text="Number of contacts: ">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>
